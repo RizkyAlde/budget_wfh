@@ -1,0 +1,26 @@
+CREATE TABLE "User" (
+    id_user SERIAL PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    jurusan VARCHAR(100),
+    universitas VARCHAR(100)
+);
+
+CREATE TABLE Pemasukan (
+    id_pemasukan SERIAL PRIMARY KEY,
+    id_user INTEGER NOT NULL,
+    sumber VARCHAR(100) NOT NULL, -- Contoh: uang saku, beasiswa, kerja
+    jumlah FLOAT8 NOT NULL,
+    tanggal DATE NOT NULL,
+    CONSTRAINT fk_pemasukan_user FOREIGN KEY (id_user) REFERENCES "User"(id_user) ON DELETE CASCADE
+);
+
+CREATE TABLE Pengeluaran (
+    id_pengeluaran SERIAL PRIMARY KEY,
+    id_user INTEGER NOT NULL,
+    kategori VARCHAR(100) NOT NULL, -- Contoh: belanja, makan, transportasi
+    jumlah FLOAT8 NOT NULL,
+    tanggal DATE NOT NULL,
+    CONSTRAINT fk_pengeluaran_user FOREIGN KEY (id_user) REFERENCES "User"(id_user) ON DELETE CASCADE
+);
