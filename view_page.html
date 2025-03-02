@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Budget</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="h-screen w-screen bg-cover bg-center bg-no-repeat" style="background-image: url('Tampilan-awal-Logo.png');">
+    <!-- Konten Utama -->
+    <div class="h-full flex flex-col justify-center items-center"></div>
+</body>
+
+<script>
+    setTimeout(() => {
+        document.body.classList.add('fade-out'); 
+        setTimeout(() => {
+            window.location.href = "home.html"; 
+        }, 1000); 
+    }, 2000); 
+</script>
+</html>
