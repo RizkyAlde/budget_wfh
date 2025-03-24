@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Smart Budget</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .font-poppins{
+            font-family:'Poppins';
+        }
+    </style>
+</head>
+
+<body class="bg-[#39A7FF] font-sans">
+    <!-- header -->
+    <div class="absolute h-13 w-52 top-0 left-0 bg-[#98e4f4] rounded-br-3xl flex relative gap-2 py-3">
+        <div class="ml-1 w-6 h-6 bg-black rounded-full"></div>
+        <h1 class="font-fredoka font-black text-lg">Hai, Sahabat Smart</h1>
+    </div>
+    <div class="mt-2 mr-4 absolute top-0 right-0">
+        <span class="text-2xl mr-2">🔔</span>
+        <span class="text-2xl">⚙️</span>
+    </div>
+    
+    <!-- saldo -->
+    <div class="mt-6 px-4">
+        <div class="bg-white p-3 rounded-full flex items-center justify-between shadow-md">
+            <div class="ml-6">
+                <p class="text-black text-xs font-poppins">Saldo uangmu</p>
+                <p class="font-bold text-lg">●●●●●●●● 👁</p>
+            </div>
+            <span class="mr-4 bg-yellow-300 px-3 py-1 rounded-full">Rp</span>
+        </div>
+    </div>
+
+    <div class="mx-auto mt-6 max-w-md">
+        <div class="rounded-t-[70px] bg-white w-full min-h-[485px] flex flex-col items-center relative">
+            <div class="flex relative top-8 rounded-3xl bg-white w-72 h-28 outline outline-[#a6a6a6] drop-shadow-[5px_10px_0px_rgba(166,166,166,0.36)]">
+                <div class="flex justify-between items-center w-full">
+                    <!-- Pemasukan -->
+                    <div class="text-center w-1/2">
+                        <img src="pemasukan.png" alt="Pemasukan" class="w-10 h-10 mx-auto">
+                        <p class="text-black">Pemasukan</p>
+                        <p class="text-[#da3422] font-bold text-lg">500.000</p>
+                    </div>
+                    <!-- Pengeluaran -->
+                    <div class="text-center w-1/2">
+                        <img src="pengeluaran.png" alt="Pengeluaran" class="w-10 h-10 mx-auto">
+                        <p class="text-black">Pengeluaran</p>
+                        <p class="text-[#da3422] font-bold text-lg">20.000</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tombol Hemat -->
+            <div class="absolute left-1/2 -translate-x-1/2 top-28">
+                <button class="bg-[#98e4f4] text-black font-bold px-2 py-1/2 text-sm rounded-md shadow">Hemat</button>
+            </div>
+
+            <!-- detail -->
+            <div class="mt-20 bg-white w-72 h-64 rounded-3xl outline-dashed outline-[#a6a6a6] relative">
+                <div class="flex justify-center space-x-1 absolute -top-5 ml-4">
+                    <button class="bg-gray-400 text-black px-2 py-1 rounded-md font-bold">Mingguan</button>
+                    <button class="bg-[#98e4f4] text-black px-2 py-1 rounded-md font-bold">Bulanan</button>
+                    <button class="bg-gray-400 text-black px-2 py-1 rounded-md font-bold">Tahunan</button>
+                </div>     
+                
+                <!-- Transaksi 1 -->
+                <div class="outline outline-1 outline-[#a6a6a6] mt-8 bg-white rounded-xl shadow-md mx-4 p-4 relative drop-shadow-[5px_10px_0px_rgba(166,166,166,0.36)]">
+                    <!-- Label Tanggal -->
+                    <p class="bg-[#98e4f4] text-black text-xs font-extrabold px-3 py-1 rounded-md absolute -top-3 left-2">
+                        Rabu, 21 Februari 2025
+                    </p>
+                
+                    <!-- Konten Utama -->
+                    <div class="flex items-center justify-between mt-6">
+                        <!-- icon -->
+                        <div class="flex items-center space-x-2">
+                            <img src="pemasukan.png" alt="Icon" class="w-12 h-12">
+                        </div>
+
+                        <div class="flex flex-col items-end">
+                            <span class="text-black font-extrabold">Makanan</span>  
+                            <span  class="text-red-500 font-extrabold text-md">-10.000</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+                
+            <!-- Tombol Tambah -->
+            <button class="absolute bottom-5 right-5 bg-white rounded-2xl p-1 outline outline-[#a6a6a6]">
+                <span class="text-5xl text-[#108fca] font-extrabold px-2">+</span>
+            </button>
+        </div>
+    </div>    
+
+
+</body>
+</html>
